@@ -1,12 +1,12 @@
-provider "aws" {
-  region = var.aws_region
-}
-
-module "example_s3_bucket" {
-  source      = "./modules/test-module"
-  bucket_name = var.bucket_name
-  bucket_tags = {
-    Environment = "Test"
-    Team        = "DevOps"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
   }
 }
