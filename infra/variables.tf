@@ -5,3 +5,8 @@ variable "aws_region" {
 variable "bucket_name" {
   default = "my-env0-example-bucket"
 }
+variable "bucket_tags" {
+  description = "Tags to assign to the S3 bucket"
+  type        = map(string)
+  default     = {}
+}
