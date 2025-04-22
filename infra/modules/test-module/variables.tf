@@ -1,4 +1,10 @@
 variable "bucket_name" {
-  description = "Base name of the bucket (a suffix will be added)"
-  default     = "my-env0-example-bucket"
+  description = "Base bucket name"
+  type        = string
+}
+
+variable "bucket_tags" {
+  description = "Tags for the bucket"
+  type        = map(string)
+  default     = {}
 }
