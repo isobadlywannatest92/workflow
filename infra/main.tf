@@ -1,5 +1,3 @@
-# main.tf
-
 provider "aws" {
   region = var.aws_region
 }
@@ -12,4 +10,3 @@ module "example_s3_bucket" {
     Team        = "DevOps"
   }
 }
-
